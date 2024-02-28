@@ -54,7 +54,7 @@ const sortVehiclesByPrice = (vehicles) => {
 };
 
 /*
-     Print implemented
+     Print implemented stuff
 */
 console.log(`\nVolume is ${volumeOfBox({ width: 4, length: 2, height: 2 })}`);
 

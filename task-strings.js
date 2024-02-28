@@ -33,7 +33,7 @@ const replace = (input) => {
 };
 
 /*
-   Print implemented
+   Print implemented stuff
  */
 console.log(parametrize("Javascript is the best"));
 console.log(giveSentenceForPerson({name: "Obi-wan", position: "Jedi", age: 40, location: "Starwars universe"}))

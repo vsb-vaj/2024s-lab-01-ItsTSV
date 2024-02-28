@@ -72,7 +72,7 @@ const getVehiclesAndTopSpeed = (vehicles) => {
 };
 
 /*
-   Print implemented
+   Print implemented stuff
 */
 console.log("\nDraw triangle:");
 drawTriangle();

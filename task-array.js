@@ -93,7 +93,7 @@ const printNumsMultipliedBy2 = (numbers) => {
 };
 
 /*
-   Print implemented
+   Print implemented stuff
  */
 
 console.log("\nPrint array:");

@@ -48,7 +48,7 @@ const biggerArray = (array1, array2) => {
 };
 
 /*
-    Print implemented
+    Print implemented stuff
  */
 console.log("\nMultiples:");
 console.log(arrayOfMultiples(7, 5));
