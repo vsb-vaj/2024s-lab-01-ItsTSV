@@ -8,8 +8,13 @@
 
 // Your code:
 const drawTriangle = (length = 5) => {
-  
-    // ... write code ...
+    for (let i = 0; i < length; i++) {
+        let line = "";
+        for (let j = 0; j <= i; j++) {
+            line += "* ";
+        }
+        console.log(line);
+    }
 };
 
 // 2#  ========== BONUS =======================
@@ -28,7 +33,18 @@ const drawTriangle = (length = 5) => {
 
 // Your code:
 const drawJavascriptWord = (word = "javascript") => {
-  // ... write code ...
+    word = word.toUpperCase();
+    for(let i = word.length; i >= 0; i--){
+        let line = "";
+        for(let j = 0; j < word.length; j++){
+            if(j < i){
+                line += "* ";
+            } else {
+                line += word[j] + " ";
+            }
+        }
+        console.log(line);
+    }
 };
 
 
@@ -48,5 +64,26 @@ const drawJavascriptWord = (word = "javascript") => {
 
 // Your code:
 const getVehiclesAndTopSpeed = (vehicles) => {
-  
+    let topSpeeds = [];
+    vehicles.forEach((vehicle) => {
+        topSpeeds.push({name: vehicle.name, topSpeed: Math.max(...vehicle.measuredSpeeds)});
+    })
+    return topSpeeds;
 };
+
+/*
+   Print implemented
+*/
+console.log("\nDraw triangle:");
+drawTriangle();
+
+console.log("\nWord:");
+drawJavascriptWord();
+
+console.log("\nTop speeds:");
+const vehicles = [
+    {name: "Executor Star Dreadnought", measuredSpeeds: [555, 545, 577, 600]},
+    {name: "T-47 Airspeeder", measuredSpeeds: [300, 311, 299, 350]},
+    {name: "AT-AT", measuredSpeeds: [20, 21, 20, 19]},
+];
+console.log(getVehiclesAndTopSpeed(vehicles));

@@ -7,7 +7,10 @@
 
 // Your code:
 const arrayOfMultiples = (num, length) => {
-    // ... write code ...
+    let nums = [];
+    for (let i = 1; i <= length; i++)
+        nums.push(num * i);
+    return nums;
 };
 
 // 2 =================================
@@ -20,7 +23,15 @@ const arrayOfMultiples = (num, length) => {
 
 // Your code:
 const changeDirection = (array) => {
-// ... write code ...
+    // Manually or by array.reverse?
+    //return array.reverse();
+
+    for (let i = 0; i < array.length / 2; i++) {
+        let temp = array[i];
+        array[i] = array[array.length - 1 - i];
+        array[array.length - 1 - i] = temp;
+    }
+    return array;
 };
 
 // 3 =================================
@@ -31,5 +42,20 @@ const changeDirection = (array) => {
 
 // Your code:
 const biggerArray = (array1, array2) => {
-// ... write code ...
+    let sum1 = array1.reduce((a, b) => a + b, 0);
+    let sum2 = array2.reduce((a, b) => a + b, 0);
+    return sum1 > sum2 ? {array: array1, sum: sum1} : {array: array2, sum: sum2};
 };
+
+/*
+    Print implemented
+ */
+console.log("\nMultiples:");
+console.log(arrayOfMultiples(7, 5));
+
+console.log("\nChange direction:");
+console.log(changeDirection([0, 1, 2, 3]));
+
+console.log("\nBigger array:");
+console.log(biggerArray([1, 2, 3, 4, 5], [50, 50]));
+console.log(biggerArray([1, 2, 3], [2, 3, 4]));
